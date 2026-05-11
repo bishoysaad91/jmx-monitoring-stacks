@@ -61,7 +61,7 @@ groups:
       severity: page
     annotations:
       summary: "Broker IO Activity <  for env {{ $labels.env }}"
-      description: "Broker IO Activity for env {{ $labels.env }} and broker {{ $label.instance }} is {{ $value }}. "
+      description: "Broker IO Activity for env {{ $labels.env }} and broker {{ $labels.instance }} is {{ $value }}. "
   
   # Page when Broker Network Activity < 40% for more than 10m.
   - alert: Broker IO Activity < 40%
@@ -71,4 +71,4 @@ groups:
       severity: page
     annotations:
       summary: "Broker IO Activity < 40% for env {{ $labels.env }}"
-      description: "Broker IO Activity for env {{ $labels.env }} and broker {{ $label.instance }} is {{ $value }}. "
+      description: "Broker IO Activity for env {{ $labels.env }} and broker {{ $labels.instance }} is {{ $value }}. "
