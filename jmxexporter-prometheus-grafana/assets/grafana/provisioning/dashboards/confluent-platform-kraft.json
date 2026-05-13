@@ -342,7 +342,7 @@
             "uid": "${Prometheus}"
           },
           "exemplar": true,
-          "expr": "kafka_controller_kafkacontroller_activecontrollercount{job=\"kafka-broker\",env=\"$env\"} > 0",
+          "expr": "kafka_controller_kafkacontroller_activecontrollercount{job=\"kafka-controller\",env=\"$env\"} > 0",
           "format": "time_series",
           "instant": true,
           "interval": "",
