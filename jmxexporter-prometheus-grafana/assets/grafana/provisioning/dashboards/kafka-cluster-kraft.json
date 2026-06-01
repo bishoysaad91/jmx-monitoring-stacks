@@ -170,7 +170,7 @@
             "uid": "${Prometheus}"
           },
           "editorMode": "code",
-          "expr": "kafka_controller_kafkacontroller_activecontrollercount{job=\"kafka-controller\",env=\"$env\",instance=~\"$instance\"} > 0",
+          "expr": "kafka_controller_kafkacontroller_activecontrollercount{job=\"kafka-controller\",env=\"$env\"} > 0",
           "format": "time_series",
           "instant": true,
           "interval": "",
