@@ -515,7 +515,7 @@
             "uid": "${Prometheus}"
           },
           "editorMode": "code",
-          "expr": "sum(kafka_controller_controllerstats_uncleanleaderelectionspersec{job=\"kafka-controller\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_controller_controllerstats_uncleanleaderelectionspersec{job=\"kafka-controller\",env=\"$env\"})",
           "format": "time_series",
           "instant": true,
           "interval": "",
