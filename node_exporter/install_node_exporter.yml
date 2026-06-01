@@ -61,8 +61,7 @@
           User=prometheus
           Group=prometheus
           Type=simple
-          ExecStart=/usr/local/bin/node_exporter --web.config.file=/etc/node_exporter/web-config.yml
-
+          ExecStart=/usr/local/bin/node_exporter
           [Install]
           WantedBy=multi-user.target
         owner: root
