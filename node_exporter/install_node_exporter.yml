@@ -1,6 +1,6 @@
 ---
 - name: Install and Configure Node Exporter (Local Source)
-  hosts: all:!control_center
+  hosts: all:!control_center:!control_center_next_gen
   become: yes
   vars:
     node_exporter_version: "1.8.2" # Match this exactly to your file version
