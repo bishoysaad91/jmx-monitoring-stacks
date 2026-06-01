@@ -776,7 +776,7 @@
             "type": "prometheus",
             "uid": "${Prometheus}"
           },
-          "expr": "sum(kafka_controller_kafkacontroller_offlinepartitionscount{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_controller_kafkacontroller_offlinepartitionscount{job=\"kafka-broker\",env=\"$env\"})",
           "format": "time_series",
           "instant": true,
           "interval": "",
