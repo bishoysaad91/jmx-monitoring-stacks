@@ -42,8 +42,8 @@
         path: "{{ remote_ssl_dir }}"
         state: directory
         owner: root
-        group: prometheus  
-        mode: '0750'       # Locked down so only root and prometheus group can see inside
+        group: root  
+        mode: '0755'
 
     - name: Copy and unarchive local Node Exporter tarball to remote hosts
       unarchive:
@@ -68,7 +68,7 @@
       copy:
         src: "{{ local_certs_dir }}/{{ inventory_hostname }}.cer"
         dest: "{{ remote_ssl_dir }}/node_exporter.cer"
-        owner: root
+        owner: prometheus
         group: prometheus
         mode: '0644'
 
@@ -76,9 +76,9 @@
       copy:
         src: "{{ local_keys_dir }}/{{ inventory_hostname }}.key"
         dest: "{{ remote_ssl_dir }}/node_exporter.key"
-        owner: root
+        owner: prometheus
         group: prometheus
-        mode: '0640'       # Secure: Group (prometheus) can read, others cannot
+        mode: '0640'
 
     - name: Create web-config.yml pointing to unified location
       copy:
